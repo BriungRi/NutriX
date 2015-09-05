@@ -1,17 +1,33 @@
 package co.gobblr.gobblr;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class HomeActivity extends ActionBarActivity {
+
+    TextView tvGreeting;
+    UserLocalStore uls;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        uls = new UserLocalStore(this);
+        if (uls.getLoggedInUser() == null)
+            startActivity(new Intent(this, LoginRegisterActivity.class)); //Checks to see if user is logged in
+
+        user = uls.getLoggedInUser(); //assigns current logged in user
+
+        tvGreeting = (TextView) findViewById(R.id.tvGreeting);
+        tvGreeting.setText(tvGreeting.getText() + " " + user.getName());
+
     }
 
     @Override

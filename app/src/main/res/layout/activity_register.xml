@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reg_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reg_username"
+                android:layout_marginBottom="10dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/reg_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etUsername"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reg_pw"
+                android:layout_marginBottom="10dp"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/reg_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etPassword"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reg_name"
+                android:layout_marginBottom="10dp"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/reg_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etName"
+                android:text="Age" />
+
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reg_age"
+                android:layout_marginBottom="10dp"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/reg_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAge"
+                android:text="Weight" />
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reg_weight"
+                android:layout_marginBottom="10dp"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/reg_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etWeight"
+                android:text="Height" />
+
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reg_height"
+                android:layout_marginBottom="10dp"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/reg_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etHeight"
+                android:text="Sex" />
+
+            <Spinner
+                android:id="@+id/spSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etHeight"
+                android:layout_toRightOf="@id/reg_sex" />
+
+            <TextView
+                android:id="@+id/reg_phys_act_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spSex"
+                android:text="Physical Activity Level" />
+
+            <Spinner
+                android:id="@+id/spPhysAct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spSex"
+                android:layout_toRightOf="@id/reg_phys_act_level" />
+
+            <Button
+                android:id="@+id/bRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spPhysAct"
+                android:layout_marginTop="150dp"
+                android:text="Register" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
