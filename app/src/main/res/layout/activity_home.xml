@@ -6,6 +6,17 @@
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomeActivity">
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="co.gobblr.gobblr.ButtonsFragment"
+        android:id="@+id/fragment"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/buttons_fragment"
+        android:layout_below="@+id/textView" />
 
 </RelativeLayout>
