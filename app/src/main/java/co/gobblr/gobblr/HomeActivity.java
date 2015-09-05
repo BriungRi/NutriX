@@ -3,6 +3,7 @@ package co.gobblr.gobblr;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ public class HomeActivity extends ActionBarActivity {
     TextView tvGreeting;
     UserLocalStore uls;
     User user;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,9 @@ public class HomeActivity extends ActionBarActivity {
         tvGreeting = (TextView) findViewById(R.id.tvGreeting);
         tvGreeting.setText(tvGreeting.getText() + " " + user.getName());
 
+        toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Home");
     }
 
     @Override
@@ -47,6 +52,10 @@ public class HomeActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if(id == R.id.camera) {
+            Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent, 0);
         }
 
         return super.onOptionsItemSelected(item);
